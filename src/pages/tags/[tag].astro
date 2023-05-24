@@ -1,0 +1,34 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { tagLabels } from '@scripts/utils'
+
+export async function getStaticPaths() {
+  const works = await Astro.glob('../../pages/work/*.md')
+  const tags = [...new Set(works.map((work) => work.frontmatter.tags).flat())]
+
+  return tags.map((tag) => {
+    const filteredWorks = works.filter((work) => work.frontmatter.tags.includes(tag))
+
+    return {
+      params: { tag },
+      props: { works: filteredWorks },
+    }
+  })
+}
+
+const { tag } = Astro.params
+const { works } = Astro.props
+---
+
+<BaseLayout title={tagLabels[tag]}>
+  <p>Work tagged with {tagLabels[tag]}.</p>
+  <ul>
+    {
+      works.map((work) => (
+        <li>
+          <a href={work.url}>{work.frontmatter.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
