@@ -17,6 +17,10 @@
   --size-header-padding-y: 3rem;
   --size-section-padding-x: 3rem;
   --size-section-padding-y: 4rem;
+
+  --transform-scale-s: scale(0.99);
+  --transform-scale-m: scale(1.03);
+  --transform-scale-l: scale(1.12);
 }
 
 @media (width >= 600px) {

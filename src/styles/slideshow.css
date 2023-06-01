@@ -25,7 +25,7 @@
         transition: transform 0.36s ease;
 
         &:hover {
-          transform: scale(1.03);
+          transform: var(--transform-scale-m);
         }
       }
     }
@@ -83,16 +83,16 @@
   transition: transform 0.24s ease;
 
   &:hover {
-    transform: translateY(-50%) scale(1.24);
+    transform: translateY(-50%) var(--transform-scale-l);
   }
 
   &.arrow-left {
     background-image: url('/assets/svg/arrow-left.svg');
-    left: 3rem;
+    left: calc(var(--size-frame-border) * 4);
   }
   &.arrow-right {
     background-image: url('/assets/svg/arrow-right.svg');
-    right: 3rem;
+    right: calc(var(--size-frame-border) * 4);
   }
 }
 
@@ -152,7 +152,7 @@
         transition: transform 0.36s ease;
 
         &:hover {
-          transform: scale(1.03);
+          transform: var(--transform-scale-s);
         }
       }
     }

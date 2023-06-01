@@ -22,7 +22,7 @@ const showIntersectionElement = (elements: IntersectionObserverEntry[]) => {
 export const setupIntersectionObserver = () => {
   const observer = new IntersectionObserver(showIntersectionElement, {
     root: null,
-    threshold: 0.36,
+    threshold: 0.24,
   })
 
   const elements = document.querySelectorAll('.slides-in, .fades-in')

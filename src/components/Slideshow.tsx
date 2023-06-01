@@ -66,12 +66,12 @@ const Slideshow = ({ page, slides }: Props) => {
       <div class='slideshow-wrapper'>
         <button
           type='button'
-          class='slideshow-navigation arrow-left'
+          class='slideshow-navigation arrow-left shadow'
           onClick={prevSlide}
         >
           &lt;
         </button>
-        <div class='slideshow-content-wrapper'>
+        <div class='slideshow-content-wrapper vignette'>
           <div
             class='slideshow-content'
             style={{
@@ -90,6 +90,7 @@ const Slideshow = ({ page, slides }: Props) => {
                   <img
                     src={`/assets/work/${page}/${slide.img}`}
                     alt={slide.label}
+                    loading='lazy'
                   />
                 </button>
               )
@@ -97,7 +98,7 @@ const Slideshow = ({ page, slides }: Props) => {
           </div>
         </div>
         <button
-          class='slideshow-navigation arrow-right'
+          class='slideshow-navigation arrow-right shadow'
           onClick={() => nextSlide()}
         >
           &gt;
@@ -132,6 +133,7 @@ const Slideshow = ({ page, slides }: Props) => {
           <img
             src={`/assets/work/${page}/${slides[currentIndex].img}`}
             alt={slides[currentIndex].label}
+            loading='lazy'
           />
           {/* <span>{slides[currentIndex].label}</span> */}
         </button>

@@ -1,0 +1,59 @@
+---
+layout: '@layouts/WorkLayout.astro'
+
+slug: 'sisu'
+title: 'SISU'
+description: 'Crypto portfolio tracking, for humans.'
+thumbnails: ['sisu-thumbnail-01.jpg', 'sisu-thumbnail-02.jpg']
+tags: ['ui-ux', 'full-stack']
+---
+
+import Slideshow from '@components/Slideshow.tsx'
+
+# SISU
+
+## A Crypto portfolio tracker, for humans.
+
+<Slideshow
+  page={frontmatter.slug}
+  slides={[
+    {
+      img: 'sisu-mockup-dashboard-01.jpg',
+      label: 'Dashboard',
+    },
+    {
+      img: 'sisu-mockup-onboarding-01.jpg',
+      label: 'Onboarding',
+    },
+    {
+      img: 'sisu-mockup-modal-01.jpg',
+      label: 'Vested Assets',
+    },
+    {
+      img: 'sisu-mockup-signin-01.jpg',
+      label: 'Sign In',
+    },
+  ]}
+  client:load
+/>
+
+<Slideshow
+  page={frontmatter.slug}
+  slides={[
+    {
+      img: 'sisu-branding-logo-01.jpg',
+      label: 'SISU Logo',
+    },
+    /* {
+      img: 'sisu-branding-icons-01.jpg',
+      label: 'SISU Icons',
+    }, */
+    /* {
+      img: 'sisu-branding-icons-02.jpg',
+      label: 'SISU Icons',
+    }, */
+  ]}
+  client:load
+/>
+
+~Check it out at [sisu.tools](https://sisu.tools)~
