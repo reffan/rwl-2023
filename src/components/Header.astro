@@ -1,7 +1,9 @@
 ---
-import BrandLogo from '@components/BrandLogo'
+import BrandLogo from '@components/BrandLogo.astro'
 ---
 
 <header>
-  <a href='/'><BrandLogo client:load /></a>
+  <a class='brandElement' href='/'>
+    <BrandLogo />
+  </a>
 </header>

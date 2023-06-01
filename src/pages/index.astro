@@ -1,26 +1,18 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro'
-import { tagLabels } from '@scripts/utils'
+import IntroSection from '@src/components/sections/IntroSection.astro'
+import WorkSection from '@src/components/sections/WorkSection.astro'
+import ContactSection from '@src/components/sections/ContactSection.astro'
+import SocialsSection from '@components/sections/SocialsSection.astro'
+import SpacerSection from '@components/sections/SpacerSection.astro'
 
 const title = 'Desiger + Developer'
-const works = await Astro.glob('../pages/work/*.md')
 ---
 
 <BaseLayout title={title}>
-  <ul>
-    {
-      works.map((work) => (
-        <li>
-          <a href={work.url}>{work.frontmatter.title}</a>
-          <ul>
-            {work.frontmatter.tags.map((tag) => (
-              <li>
-                <a href={`/tags/${tag}`}>{tagLabels[tag]}</a>
-              </li>
-            ))}
-          </ul>
-        </li>
-      ))
-    }
-  </ul>
+  <IntroSection />
+  <WorkSection />
+  <ContactSection />
+  <SocialsSection />
+  <SpacerSection />
 </BaseLayout>

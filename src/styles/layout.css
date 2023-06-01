@@ -1,0 +1,73 @@
+* {
+  user-select: none;
+}
+
+/* General */
+html,
+body {
+  color: var(--color-on-background);
+  background-color: var(--color-background);
+}
+
+html {
+  font-size: 75%; /* 12px */
+
+  /* scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track); */
+  /* scrollbar-width: thin; */
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  padding: var(--size-outer-border);
+
+  overflow-y: scroll;
+  min-height: 100dvh;
+
+  background-image: url('/assets/svg/iridescence.svg');
+  background-size: cover;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: var(--size-header-padding-y) var(--size-header-padding-x) 0
+    var(--size-header-padding-x);
+
+  color: var(--color-on-surface);
+  background-color: var(--color-surface);
+  background-image: url('/assets/png/texture.png');
+  background-attachment: fixed;
+
+  & svg {
+    animation-name: fade-in;
+    animation-duration: 1.8s;
+    animation-timing-function: cubic-bezier(0.24, 1, 0.32, 1);
+    animation-delay: 0.24s;
+    animation-fill-mode: both;
+  }
+}
+
+/* Main */
+main {
+  color: var(--color-on-surface);
+  background-color: var(--color-surface);
+  background-image: url('/assets/png/texture.png');
+  background-attachment: fixed;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: var(--size-outer-border);
+
+  color: var(--color-on-background);
+  background-color: transparent;
+}

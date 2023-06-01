@@ -1,0 +1,32 @@
+:root {
+  --color-on-background: hsl(0deg, 0%, 12%);
+  --color-background: hsl(0deg, 0%, 96%);
+
+  --color-on-surface: hsl(0deg, 0%, 96%);
+  --color-surface: hsl(0deg, 0%, 12%);
+
+  --color-accent: #d0bef8;
+
+  --color-scrollbar-track: hsl(0deg, 0%, 24%);
+  --color-scrollbar-thumb: var(--color-accent);
+
+  --size-outer-border: 1rem;
+  --size-frame-border: 0.5rem;
+
+  --size-header-padding-x: 3rem;
+  --size-header-padding-y: 3rem;
+  --size-section-padding-x: 3rem;
+  --size-section-padding-y: 4rem;
+}
+
+@media (width >= 600px) {
+  :root {
+    --size-outer-border: 2rem;
+    --size-frame-border: 1rem;
+
+    --size-header-padding-x: 4rem;
+    --size-header-padding-y: 8rem;
+    --size-section-padding-x: 4rem;
+    --size-section-padding-y: 8rem;
+  }
+}

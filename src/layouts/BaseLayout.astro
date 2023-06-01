@@ -1,5 +1,5 @@
 ---
-import '@styles/global.scss'
+import '@styles/_global.css'
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
 
@@ -11,14 +11,36 @@ const { title } = Astro.props
   <head>
     <meta charset='utf-8' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='viewport' content='width=device-width' />
-    <meta name='generator' content={Astro.generator} />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Reffan Liefde | {title}</title>
+    <meta
+      name='description'
+      content='Developing pleasant sensations, built upon good vibrations.'
+    />
+    <meta
+      name='keywords'
+      content='design, development, ui, ux, web, frontend, backend, fullstack, html, css, sass, js, ts, react, reactjs'
+    />
+    <meta name='author' content='Reffan Liefde' />
+    <meta name='generator' content={Astro.generator} />
     <script async defer src='https://nullitics.com/script.js'></script>
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Work+Sans:wght@300&display=swap'
+      rel='stylesheet'
+    />
     <link rel='sitemap' href='/sitemap-index.xml' />
   </head>
   <body>
     <noscript>
+      <style>
+        .slides-in,
+        .fades-in {
+          /* MARK: Always visible if JS is disabled. */
+          opacity: 1 !important;
+        }
+      </style>
       <img
         src={`https://nullitics.com/file.gif?u=reffanliefde.nl${pathname}`}
       />
@@ -28,5 +50,13 @@ const { title } = Astro.props
       <slot />
     </main>
     <Footer />
+    <script>
+      import {
+        setupIntersectionObserver,
+        generateAccentColor,
+      } from '@src/scripts/utilities'
+      setupIntersectionObserver()
+      generateAccentColor()
+    </script>
   </body>
 </html>

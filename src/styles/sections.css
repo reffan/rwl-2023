@@ -1,0 +1,139 @@
+section,
+article {
+  padding: var(--size-section-padding-y) var(--size-section-padding-x);
+
+  & .section-container {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+
+    max-width: 1200px;
+  }
+}
+
+/* Intro */
+section.intro {
+  justify-content: flex-start;
+  align-items: center;
+
+  & p,
+  span {
+    font-size: 2rem;
+    line-height: 3rem;
+
+    animation-name: fade-in;
+    animation-duration: 1.8s;
+    animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    animation-delay: 0.36s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
+}
+
+@media (width >= 600px) {
+  section.intro {
+    justify-content: center;
+    text-align: center;
+
+    & p,
+    span {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  }
+}
+
+/* Work */
+section.work {
+  & ul.work-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--size-section-padding-y);
+
+    margin-top: calc(var(--size-section-padding-y) / 2);
+
+    list-style: none;
+
+    & a {
+      text-decoration: none;
+    }
+  }
+
+  & .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & h2,
+    li {
+      margin-bottom: 0;
+    }
+
+    & ul.tag-list {
+      display: none;
+
+      list-style: none;
+
+      & li + li:before {
+        content: ', ';
+      }
+    }
+  }
+}
+
+@media (width >= 600px) {
+  section.work {
+    & .text {
+      & ul.tag-list {
+        display: flex;
+      }
+    }
+  }
+}
+
+/* Contact */
+section.contact {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media (width >= 600px) {
+  section.contact {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Spacer */
+section.spacer {
+  padding: 0;
+}
+
+/* Socials */
+section.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & ul.socials {
+    display: flex;
+    gap: 2rem;
+
+    list-style: none;
+  }
+}
+
+/* Work */
+article.work {
+  & h1 {
+    color: var(--color-accent, var(--color-on-surface));
+  }
+}
+
+/* Error */
+article.error {
+  & h1 {
+    color: var(--color-accent, var(--color-on-surface));
+  }
+}
