@@ -1,21 +1,11 @@
-section,
-article {
-  padding: var(--size-section-padding-y) var(--size-section-padding-x);
+/* HOME */
 
-  & .section-container {
-    display: flex;
-    flex-direction: column;
-
-    margin: 0 auto;
-
-    max-width: 1200px;
-  }
-}
-
-/* Intro */
-section.intro {
+/* About */
+section.about {
   justify-content: flex-start;
   align-items: center;
+
+  padding: var(--size-section-padding-y) var(--size-section-padding-x);
 
   & p,
   span {
@@ -32,7 +22,7 @@ section.intro {
 }
 
 @media (width >= 600px) {
-  section.intro {
+  section.about {
     justify-content: center;
     text-align: center;
 
@@ -44,14 +34,15 @@ section.intro {
   }
 }
 
-/* Work */
-section.work {
+/* Works */
+section.works {
   & ul.work-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--size-section-padding-y);
 
     margin-top: calc(var(--size-section-padding-y) / 2);
+    padding: 0 var(--size-section-padding-x);
 
     list-style: none;
 
@@ -73,6 +64,7 @@ section.work {
     & ul.tag-list {
       display: none;
 
+      color: var(--color-on-surface-subtle);
       list-style: none;
 
       & li + li:before {
@@ -83,7 +75,7 @@ section.work {
 }
 
 @media (width >= 600px) {
-  section.work {
+  section.works {
     & .text {
       & ul.tag-list {
         display: flex;
@@ -94,45 +86,45 @@ section.work {
 
 /* Contact */
 section.contact {
-  justify-content: flex-start;
-  align-items: center;
-}
+  padding: calc(2 * var(--size-section-padding-y)) var(--size-section-padding-x);
 
-@media (width >= 600px) {
-  section.contact {
-    justify-content: center;
-    text-align: center;
-  }
-}
-
-/* Spacer */
-section.spacer {
-  padding: 0;
-}
-
-/* Socials */
-section.socials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 
   & ul.socials {
     display: flex;
     gap: 2rem;
 
+    margin: 0 auto;
+
     list-style: none;
   }
 }
 
+/* SINGLE ENTRY */
+
 /* Work */
-article.work {
+section.work {
+  padding: var(--size-section-padding-y) var(--size-section-padding-x);
+
   & h1 {
     color: var(--color-accent, var(--color-on-surface));
+  }
+
+  & p {
+    color: var(--color-on-surface-subtle);
+  }
+
+  & p + .image-grid-container {
+    margin-bottom: 2rem;
   }
 }
 
 /* Error */
-article.error {
+section.error {
+  padding: var(--size-section-padding-y) var(--size-section-padding-x);
+
+  text-align: center;
+
   & h1 {
     color: var(--color-accent, var(--color-on-surface));
   }

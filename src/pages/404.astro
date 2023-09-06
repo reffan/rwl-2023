@@ -1,15 +1,11 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro'
+import LayoutError from '@layouts/Error.astro'
 ---
 
-<BaseLayout title='404'>
-  <article class='error'>
-    <div class='section-container'>
-      <h1>404</h1>
-      <p>
-        Sorry, could not find that page.<br />
-        <a href='/'>Return to Home</a>
-      </p>
-    </div>
-  </article>
-</BaseLayout>
+<LayoutError title='404'>
+  <h1>404</h1>
+  <p>Sorry, page not found.</p>
+  <!-- <p>
+    <a href='/'>Return to Works</a>
+  </p> -->
+</LayoutError>

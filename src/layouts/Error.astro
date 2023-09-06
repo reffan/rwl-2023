@@ -1,0 +1,13 @@
+---
+import LayoutBase from '@layouts/Base.astro'
+
+const { title } = Astro.props
+---
+
+<LayoutBase title={title}>
+  <section class='error'>
+    <div class='responsive-container'>
+      <slot />
+    </div>
+  </section>
+</LayoutBase>

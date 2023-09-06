@@ -1,0 +1,52 @@
+---
+import { generateRipples } from '@scripts/ripples'
+
+const colorType = Math.random() <= 1 / 3
+
+const posOrNeg = Math.random() < 0.5 ? -1 : 1
+const randomX = Math.floor(Math.random() * 50) * posOrNeg
+const randomY = Math.floor(Math.random() * 25) * posOrNeg - 25
+// const randomY = 0
+
+const props = {
+  ripples: {
+    color: colorType ? 'url(#iridescence)' : 'var(--color-on-surface)',
+    opacity: colorType ? 0.6 : 0.24,
+    width: 0.48,
+  },
+}
+---
+
+<svg
+  xmlns='http://www.w3.org/2000/svg'
+  viewBox='-144 -144 288 288'
+  fill='none'
+  style={{
+    position: 'relative',
+    top: `${randomY}%`,
+    left: `${randomX}%`,
+  }}
+>
+  <defs>
+    <linearGradient
+      id='iridescence'
+      x1='-144'
+      y1='-144'
+      x2='144'
+      y2='144'
+      gradientUnits='userSpaceOnUse'
+    >
+      <stop offset='0' stop-color='#B8E0F9'></stop>
+      <stop offset='0.151042' stop-color='#FBFFBA'></stop>
+      <stop offset='0.291667' stop-color='#D0BEF8'></stop>
+      <stop offset='0.463542' stop-color='#F8F7FC'></stop>
+      <stop offset='0.635417' stop-color='#A3E3ED'></stop>
+      <stop offset='0.8125' stop-color='#FBFFBA'></stop>
+      <stop offset='0.90625' stop-color='#FEBAAD'></stop>
+      <stop offset='1' stop-color='#E0B0FF'></stop>
+    </linearGradient>
+  </defs>
+  <g opacity={props.ripples.opacity}>
+    <Fragment set:html={generateRipples(0, 0, props).join('')} />
+  </g>
+</svg>

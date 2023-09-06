@@ -90,6 +90,7 @@ const Slideshow = ({ page, slides }: Props) => {
                   <img
                     src={`/assets/work/${page}/${slide.img}`}
                     alt={slide.label}
+                    title={slide.label}
                     loading='lazy'
                   />
                 </button>
@@ -133,6 +134,7 @@ const Slideshow = ({ page, slides }: Props) => {
           <img
             src={`/assets/work/${page}/${slides[currentIndex].img}`}
             alt={slides[currentIndex].label}
+            title={slides[currentIndex].label}
             loading='lazy'
           />
           {/* <span>{slides[currentIndex].label}</span> */}

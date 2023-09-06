@@ -1,0 +1,23 @@
+---
+// import IconBehance from '@assets/svg/icon-behance.svg?raw'
+// import IconDribbble from '@assets/svg/icon-dribbble.svg?raw'
+import IconEmail from '@assets/svg/icon-email.svg?raw'
+import IconGitHub from '@assets/svg/icon-github.svg?raw'
+// import IconTwitter from '@assets/svg/icon-twitter.svg?raw'
+// import IconX from '@assets/svg/icon-x.svg?raw'
+import IconLinkedIn from '@assets/svg/icon-linkedin.svg?raw'
+
+const icons = {
+  // behance: IconBehance,
+  // dribbble: IconDribbble,
+  email: IconEmail,
+  github: IconGitHub,
+  // twitter: IconTwitter,
+  // x: IconX,
+  linkedin: IconLinkedIn,
+}
+
+const { icon } = Astro.props
+---
+
+<Fragment set:html={icons[icon as keyof typeof icons]} />

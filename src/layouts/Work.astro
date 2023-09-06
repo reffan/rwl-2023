@@ -1,0 +1,15 @@
+---
+import LayoutBase from '@layouts/Base.astro'
+import SectionContact from '@layouts/sections/Contact.astro'
+
+const { frontmatter } = Astro.props
+---
+
+<LayoutBase title={frontmatter.title}>
+  <section class='work fades-in'>
+    <div class='responsive-container'>
+      <slot />
+    </div>
+  </section>
+  <SectionContact />
+</LayoutBase>

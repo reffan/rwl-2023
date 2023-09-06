@@ -1,18 +1,14 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro'
-import IntroSection from '@src/components/sections/IntroSection.astro'
-import WorkSection from '@src/components/sections/WorkSection.astro'
-import ContactSection from '@src/components/sections/ContactSection.astro'
-import SocialsSection from '@components/sections/SocialsSection.astro'
-import SpacerSection from '@components/sections/SpacerSection.astro'
+import LayoutBase from '@layouts/Base.astro'
+import SectionAbout from '@layouts/sections/About.astro'
+import SectionWorks from '@layouts/sections/Works.astro'
+import SectionContact from '@layouts/sections/Contact.astro'
 
-const title = 'Desiger + Developer'
+const title = 'Designer + Developer'
 ---
 
-<BaseLayout title={title}>
-  <IntroSection />
-  <WorkSection />
-  <ContactSection />
-  <SocialsSection />
-  <SpacerSection />
-</BaseLayout>
+<LayoutBase title={title}>
+  <SectionAbout />
+  <SectionWorks />
+  <SectionContact />
+</LayoutBase>

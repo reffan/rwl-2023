@@ -1,8 +1,10 @@
 :root {
+  /* Colors */
   --color-on-background: hsl(0deg, 0%, 12%);
   --color-background: hsl(0deg, 0%, 96%);
 
   --color-on-surface: hsl(0deg, 0%, 96%);
+  --color-on-surface-subtle: hsl(0deg, 0%, 84%);
   --color-surface: hsl(0deg, 0%, 12%);
 
   --color-accent: #d0bef8;
@@ -10,26 +12,42 @@
   --color-scrollbar-track: hsl(0deg, 0%, 24%);
   --color-scrollbar-thumb: var(--color-accent);
 
+  /* Sizes */
   --size-outer-border: 1rem;
-  --size-frame-border: 0.5rem;
+  /* --size-frame-border: 0.25rem; */
+  /* --size-frame-border: 0rem; */
+
+  --size-header-height: 10rem;
+  --size-footer-height: calc(6rem + 1rem);
+  --size-ripples-height: 60rem;
 
   --size-header-padding-x: 3rem;
   --size-header-padding-y: 3rem;
   --size-section-padding-x: 3rem;
   --size-section-padding-y: 4rem;
 
+  /* Transforms */
   --transform-scale-s: scale(0.99);
   --transform-scale-m: scale(1.03);
   --transform-scale-l: scale(1.12);
+
+  /* Breakpoints */
+  --breakpoint-s: 600px;
 }
 
 @media (width >= 600px) {
   :root {
+    /* Sizes */
     --size-outer-border: 2rem;
-    --size-frame-border: 1rem;
+    /* --size-frame-border: 0.5rem; */
+    /* --size-frame-border: 0rem; */
+
+    --size-header-height: 14rem;
+    --size-footer-height: calc(8rem + 2rem);
+    --size-ripples-height: 84rem;
 
     --size-header-padding-x: 4rem;
-    --size-header-padding-y: 8rem;
+    --size-header-padding-y: 4rem;
     --size-section-padding-x: 4rem;
     --size-section-padding-y: 8rem;
   }

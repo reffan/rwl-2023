@@ -1,9 +1,49 @@
 ---
-import BrandLogo from '@components/BrandLogo.astro'
+import BrandWordmark from '@components/brand/Wordmark.astro'
+import SvgIcon from '@components/SvgIcon.astro'
 ---
 
 <header>
-  <a class='brandElement' href='/'>
-    <BrandLogo />
-  </a>
+  <nav class='responsive-container'>
+    <div class='row'>
+      <div class='column'>
+        <a class='reverse-accent' href='/'>
+          <div class='svg-wrapper brand-wordmark'>
+            <BrandWordmark />
+          </div>
+        </a>
+      </div>
+      <div class='column'>
+        <ul class='navigation'>
+          <!-- <li><a href='/'>Work</a></li> -->
+          <!-- <li><a href='/about'>About</a></li> -->
+          <li>
+            <a class='reverse-accent' href='mailto:hello@reffanliefde.nl'>
+              <div class='svg-wrapper icon-social'>
+                <SvgIcon icon='email' />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class='reverse-accent' href='https://github.com/reffan'>
+              <div class='svg-wrapper icon-social'>
+                <SvgIcon icon='github' />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              class='reverse-accent'
+              href='https://linkedin.com/in/reffanliefde'
+            >
+              <div class='svg-wrapper icon-social'>
+                <SvgIcon icon='linkedin' />
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>
+<div class='header-spacer'></div>

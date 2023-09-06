@@ -10,6 +10,7 @@ h3 {
   font-weight: 600;
 
   text-transform: uppercase;
+  font-feature-settings: 'lnum';
 }
 
 h1 {
@@ -38,9 +39,8 @@ h3 {
 
 p,
 span,
-li,
 label {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 
   font-size: 1.5rem;
   line-height: 2rem;
@@ -50,6 +50,12 @@ label {
   }
 }
 
+li {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+/* Responsivness */
 @media (width >= 600px) {
   h1 {
     margin-bottom: 0.5rem;
@@ -74,11 +80,39 @@ label {
 
   p,
   span,
-  li,
   label {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 
     font-size: 2rem;
     line-height: 2.5rem;
+  }
+
+  li {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+/* Links */
+a,
+a.accent {
+  color: var(--color-accent, var(--color-on-surface));
+  transition: color 0.18s ease-in-out;
+
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-on-surface);
+    transition: color 0.06s ease-in-out;
+  }
+}
+
+a.reverse-accent {
+  color: var(--color-on-surface);
+  transition: color 0.24s ease-in-out;
+
+  &:hover {
+    color: var(--color-accent, var(--color-on-surface));
+    transition: color 0.12s ease-in-out;
   }
 }
