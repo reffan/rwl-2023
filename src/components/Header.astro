@@ -3,7 +3,7 @@ import BrandWordmark from '@components/brand/Wordmark.astro'
 import SvgIcon from '@components/SvgIcon.astro'
 ---
 
-<header>
+<header transition:name='header' transition:persist>
   <nav class='responsive-container'>
     <div class='row'>
       <div class='column'>
@@ -46,4 +46,5 @@ import SvgIcon from '@components/SvgIcon.astro'
     </div>
   </nav>
 </header>
-<div class='header-spacer'></div>
+<div class='header-spacer' transition:name='header-spacer' transition:persist>
+</div>

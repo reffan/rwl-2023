@@ -2,6 +2,12 @@
 import LayoutBase from '@layouts/Base.astro'
 import SectionContact from '@layouts/sections/Contact.astro'
 
+type Props = {
+  frontmatter: {
+    title: string
+  }
+}
+
 const { frontmatter } = Astro.props
 ---
 

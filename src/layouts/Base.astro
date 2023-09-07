@@ -1,9 +1,15 @@
 ---
+import { ViewTransitions } from 'astro:transitions'
+
 import '@styles/_global.css'
 
 import Ripples from '@components/Ripples.astro'
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
+
+type Props = {
+  title: string
+}
 
 const { pathname } = Astro.url
 const { title } = Astro.props
@@ -51,7 +57,7 @@ const { title } = Astro.props
         src={`https://nullitics.com/file.gif?u=reffanliefde.nl${pathname}`}
       />
     </noscript>
-    <div class='ripples'>
+    <div class='ripples' transition:name='ripples'>
       <Ripples />
       <Ripples />
     </div>

@@ -7,6 +7,10 @@ import IconGitHub from '@assets/svg/icon-github.svg?raw'
 // import IconX from '@assets/svg/icon-x.svg?raw'
 import IconLinkedIn from '@assets/svg/icon-linkedin.svg?raw'
 
+type Props = {
+  icon: keyof typeof icons
+}
+
 const icons = {
   // behance: IconBehance,
   // dribbble: IconDribbble,
@@ -20,4 +24,4 @@ const icons = {
 const { icon } = Astro.props
 ---
 
-<Fragment set:html={icons[icon as keyof typeof icons]} />
+<Fragment set:html={icons[icon]} />

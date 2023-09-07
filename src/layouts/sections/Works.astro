@@ -30,12 +30,8 @@ const works = await Astro.glob('../../pages/work/*.mdx')
                 <h2>{work.frontmatter.title}</h2>
               </a>
               <ul class='tag-list'>
-                {work.frontmatter.tags.map((tag: string) => (
-                  <li>
-                    {/* <a class='text-link' href={`/tags/${tag}`}> */}
-                    {tagLabels[tag as keyof typeof tagLabels] || tag}
-                    {/* </a> */}
-                  </li>
+                {work.frontmatter.tags.map((tag: keyof typeof tagLabels) => (
+                  <li>{tagLabels[tag] || tag}</li>
                 ))}
               </ul>
             </div>
