@@ -1,5 +1,5 @@
 ---
-layout: '@layouts/WorkLayout.astro'
+layout: '@layouts/Work.astro'
 
 slug: 'sisu'
 title: 'SISU'
@@ -8,15 +8,22 @@ thumbnails: ['sisu-thumbnail-01.jpg', 'sisu-thumbnail-02.jpg']
 tags: ['ui-ux', 'full-stack']
 ---
 
-import Slideshow from '@components/Slideshow.tsx'
+import Spacer from '@components/Spacer.astro'
+import ImageGrid from '@components/ImageGrid.tsx'
 
 # SISU
 
 ## A Crypto portfolio tracker, for humans.
 
-<Slideshow
+[Cryptocurrencies](https://en.wikipedia.org/wiki/Cryptocurrency) provide a breath of fresh air to the existing financial system. Whilst the technology is advancing rapidly, it can be challenging to keep up with. It exhibits some rough spots and still has a steep learning curve.
+
+Mass adoption of this innovative financial system depends on its accessibility to the general public.
+
+<Spacer multiplier={2} />
+
+<ImageGrid
   page={frontmatter.slug}
-  slides={[
+  images={[
     {
       img: 'sisu-mockup-dashboard-01.jpg',
       label: 'Dashboard',
@@ -34,26 +41,58 @@ import Slideshow from '@components/Slideshow.tsx'
       label: 'Sign In',
     },
   ]}
+  display='16:9'
   client:load
 />
 
-<Slideshow
+<Spacer multiplier={2} />
+
+### Development
+
+We set out to create web3 tools with a set of core pillars: Be conversational, educational and offer Peace of Mind.
+
+To fulfill this objective, we designed a crypto portfolio tracker that's completely adaptable, presented in plain and understandable language. The tool welcomed both newcomers and those experienced in the realm of traditional finance.
+
+The tech stack consisted of [React](https://react.dev), [Prisma](https://www.prisma.io), [Fastify](https://fastify.dev), [Docker](https://www.docker.com), [Terraform](https://www.terraform.io) and [Amazon Web Services (AWS)](https://aws.amazon.com).
+
+<Spacer />
+
+### Branding
+
+In addition to my role as a full-stack developer on the project, I also designed the company's wordmark and icon.
+
+In collaboration with the design firm [Integral](https://integral.im), we created visually striking brand elements that complemented and clarified the vision behind our app.
+
+<Spacer />
+
+<ImageGrid
   page={frontmatter.slug}
-  slides={[
+  images={[
     {
       img: 'sisu-branding-logo-01.jpg',
       label: 'SISU Logo',
     },
-    /* {
-      img: 'sisu-branding-icons-01.jpg',
-      label: 'SISU Icons',
-    }, */
-    /* {
-      img: 'sisu-branding-icons-02.jpg',
-      label: 'SISU Icons',
-    }, */
   ]}
+  display='16:9'
   client:load
 />
 
-~Check it out at [sisu.tools](https://sisu.tools)~
+<ImageGrid
+  page={frontmatter.slug}
+  images={[
+    {
+      img: 'sisu-ext-branding-01.jpg',
+      label: 'SISU brand visuals, by Integral',
+    },
+    {
+      img: 'sisu-ext-branding-02.jpg',
+      label: 'SISU brand visuals, by Integral',
+    },
+  ]}
+  display='16:9'
+  client:load
+/>
+
+<Spacer multiplier={2} />
+
+~Check it out at [sisu.tools](https://sisu.tools).~

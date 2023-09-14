@@ -1,5 +1,5 @@
 ---
-layout: '@layouts/WorkLayout.astro'
+layout: '@layouts/Work.astro'
 
 slug: 'breathe'
 title: 'BREATHE'
@@ -8,9 +8,78 @@ thumbnails: ['breathe-thumbnail-01.jpg', 'breathe-thumbnail-02.jpg']
 tags: ['ui-ux', 'frontend']
 ---
 
+import Spacer from '@components/Spacer.astro'
+import ImageGrid from '@components/ImageGrid.tsx'
+
 # BREATHE
 
 ## Be present.
 
-Try it on [karmic.works/breathe](https://karmic.works/breathe)  
-See the source code over at [GitHub](https://github.com/reffan/breathe-2023)
+In these busy times, we can all use a bit of relaxation. BREATHE aims to provide a quick, low-barrier way to get going with [breathing exercises](https://en.wikipedia.org/wiki/Pranayama).
+
+Count down to bliss with this gentle, minimalistic web app.
+
+<Spacer multiplier={2} />
+
+<ImageGrid
+  page={frontmatter.slug}
+  images={[
+    {
+      img: 'breathe-app-inhale-01.jpg',
+      label: 'Inhale...',
+    },
+    {
+      img: 'breathe-app-exhale-01.jpg',
+      label: 'Exhale...',
+    },
+  ]}
+  display='1:1'
+  client:load
+/>
+
+<Spacer multiplier={2} />
+
+The app offers both complete beginners or aspiring yogis with a simple way to start their journey.
+
+By offering presets as a helpful starting point and providing simple slider controls, you can customize your practice. The experience can be further enhanced by choosing your own background color or picking a different scene to match your mood.
+
+<Spacer multiplier={2} />
+
+<ImageGrid
+  page={frontmatter.slug}
+  images={[
+    // {
+    //   img: 'breathe-tab-speed-01.jpg',
+    //   label: 'Speed & Duration',
+    // },
+    {
+      img: 'breathe-tab-pattern-01.jpg',
+      label: 'Pattern, customised setting',
+    },
+    {
+      img: 'breathe-tab-pattern-02.jpg',
+      label: 'Pattern, presets',
+    },
+    // {
+    //   img: 'breathe-tab-scene-01.jpg',
+    //   label: 'Scene',
+    // },
+    // {
+    //   img: 'breathe-tab-scene-02.jpg',
+    //   label: 'Scene, change background color',
+    // },
+    {
+      img: 'breathe-tab-about-01.jpg',
+      label: 'About the app',
+    },
+  ]}
+  display='9:16'
+  client:load
+/>
+
+<Spacer multiplier={2} />
+
+{/* BREATHE was made with ReactJS. */}
+
+Give it a go on [karmic.works/breathe](https://karmic.works/breathe).  
+See the source code over at [GitHub](https://github.com/reffan/breathe-2023).
