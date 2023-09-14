@@ -11,9 +11,9 @@ const works = await Astro.glob('../../pages/work/*.mdx')
       {
         works.map((work) => (
           <li class='slides-in'>
-            <div class='thumbnails vignette'>
+            <div class='thumbnails'>
               <a href={work.url}>
-                <div class='thumbnails-container'>
+                <div class='thumbnails-container vignette'>
                   <img
                     src={`/assets/work/${work.frontmatter.slug}/thumbnails/${work.frontmatter.thumbnails[0]}`}
                     alt=''

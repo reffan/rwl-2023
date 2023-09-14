@@ -1,0 +1,10 @@
+---
+type Props = {
+  multiplier?: number
+}
+
+const { multiplier } = Astro.props
+---
+
+<div style={{ height: `calc(${multiplier || 1} * var(--size-spacer-height))` }}>
+</div>

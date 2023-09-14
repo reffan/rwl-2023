@@ -24,6 +24,7 @@ const Slideshow = ({ page, slides }: Props) => {
 
   useEffect(() => {
     startTimeout()
+
     return () => {
       clearTimeout(timeoutFn)
     }

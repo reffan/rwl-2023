@@ -17,24 +17,39 @@ html {
 }
 
 body {
-  padding: var(--size-outer-border);
-  overflow-y: scroll;
-}
-
-.wrapper {
-  min-height: calc(100dvh - (2 * var(--size-outer-border)));
-
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-
-  height: 100%;
-
-  color: var(--color-on-surface);
-  background-color: var(--color-surface);
-
   background-image: url('/assets/png/texture.png');
   background-blend-mode: multiply;
   background-size: 24rem;
+
+  min-height: calc(100dvh - (2 * var(--size-outer-border)));
+  height: 100%;
+
+  overflow-y: scroll;
+}
+
+.ripples {
+  position: absolute;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  & > svg {
+    height: var(--size-ripples-height);
+    max-width: initial;
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  position: relative;
+  z-index: 9000;
+
+  min-height: calc(100dvh - (2 * var(--size-outer-border)));
+
+  border: var(--size-outer-border) solid var(--color-outer-border);
 }
 
 /* Header */
@@ -106,7 +121,7 @@ header {
 
 header > nav {
   & .row {
-    gap: 4rem;
+    gap: 2rem;
 
     & .column {
       flex: initial;
@@ -129,6 +144,14 @@ header > nav {
   }
 }
 
+@media (width >= 600px) {
+  header > nav {
+    & .row {
+      gap: 4rem;
+    }
+  }
+}
+
 /* Footer */
 footer {
   display: flex;
@@ -138,17 +161,31 @@ footer {
   padding-top: var(--size-outer-border);
   height: var(--size-footer-height);
 
-  background-color: var(--color-background);
+  background-color: var(--color-outer-border);
 }
 
 /* Rows & Columns */
 .row {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 
   & > .column {
     flex: 1;
+  }
+}
+
+@media (width >= 600px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    align-items: center;
+
+    & > .column {
+      flex: 1;
+    }
   }
 }
 

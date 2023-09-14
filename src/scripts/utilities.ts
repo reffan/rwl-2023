@@ -5,4 +5,5 @@ export const tagLabels = {
   'backend': 'Backend',
   'full-stack': 'Full Stack',
   'infrastructure': 'Infrastructure',
+  'founder': 'Founder',
 }

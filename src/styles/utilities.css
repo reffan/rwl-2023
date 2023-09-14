@@ -30,49 +30,6 @@
 }
 
 /* Random */
-ul .thumbnails {
-  margin-bottom: 1rem;
-  /* border: var(--size-frame-border) solid hsl(0deg 0% 96%); */
-
-  width: 100%;
-
-  aspect-ratio: 16 / 9;
-
-  & .thumbnails-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-
-    & img {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-      object-position: center center;
-
-      transition: opacity 0.6 ease;
-
-      &:hover {
-        opacity: 0;
-      }
-    }
-
-    & img + img {
-      opacity: 0;
-      transition: all 0.36s ease;
-
-      &:hover {
-        opacity: 1;
-        transform: var(--transform-scale-m);
-      }
-    }
-  }
-}
 
 .shadow {
   box-shadow: 0 0.5rem 1rem -0.25rem rgba(0, 0, 0, 0.09);
@@ -82,32 +39,14 @@ ul .thumbnails {
   &::after {
     position: absolute;
 
-    /* top: var(--size-frame-border);
-    bottom: var(--size-frame-border);
-    left: var(--size-frame-border);
-    right: var(--size-frame-border); */
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
 
     content: '';
-
     pointer-events: none;
 
     box-shadow: 0.5rem 0.5rem 5rem 0 rgba(0, 0, 0, 0.09) inset;
-  }
-}
-
-/* Ripples */
-.ripples {
-  position: absolute;
-  overflow: hidden;
-
-  width: calc(100% - (2 * var(--size-outer-border)));
-
-  & > svg {
-    height: var(--size-ripples-height);
-    max-width: initial;
   }
 }

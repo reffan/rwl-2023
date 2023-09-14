@@ -11,6 +11,8 @@ h3 {
 
   text-transform: uppercase;
   font-feature-settings: 'lnum';
+
+  text-wrap: balance;
 }
 
 h1 {
@@ -48,6 +50,10 @@ label {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+p {
+  text-wrap: balance;
 }
 
 li {
@@ -96,23 +102,60 @@ li {
 /* Links */
 a,
 a.accent {
-  color: var(--color-accent, var(--color-on-surface));
+  color: var(--color-accent, var(--color-on-background));
   transition: color 0.18s ease-in-out;
 
   text-decoration: none;
 
   &:hover {
-    color: var(--color-on-surface);
+    color: var(--color-on-background);
     transition: color 0.06s ease-in-out;
   }
 }
 
 a.reverse-accent {
-  color: var(--color-on-surface);
+  color: var(--color-on-background);
   transition: color 0.24s ease-in-out;
 
   &:hover {
-    color: var(--color-accent, var(--color-on-surface));
+    color: var(--color-accent, var(--color-on-background));
     transition: color 0.12s ease-in-out;
+  }
+}
+
+a.cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 1rem auto 0 auto;
+  padding: 1rem;
+
+  font-size: 1rem;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  color: var(--color-background);
+  background-color: var(--color-accent);
+
+  border-radius: 4rem;
+
+  transition: all 0.24s ease-in-out;
+
+  &:hover {
+    color: var(--color-background);
+    background-color: var(--color-on-background);
+
+    transform: var(--transform-scale-m);
+
+    transition: all 0.12s ease-in-out;
+  }
+}
+
+@media (width >= 600px) {
+  a.cta {
+    font-size: 2rem;
   }
 }

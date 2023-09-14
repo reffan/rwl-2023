@@ -1,25 +1,26 @@
 :root {
   /* Colors */
-  --color-on-background: hsl(0deg, 0%, 12%);
-  --color-background: hsl(0deg, 0%, 96%);
-
-  --color-on-surface: hsl(0deg, 0%, 96%);
-  --color-on-surface-subtle: hsl(0deg, 0%, 84%);
-  --color-surface: hsl(0deg, 0%, 12%);
 
   --color-accent: #d0bef8;
+
+  --color-on-background: hsl(0deg, 0%, 96%);
+  --color-on-background-subtle: hsl(0deg, 0%, 84%);
+  --color-background: hsl(0deg, 0%, 12%);
+
+  --color-on-outer-border: hsl(0deg, 0%, 12%);
+  --color-outer-border: hsl(0deg, 0%, 96%);
 
   --color-scrollbar-track: hsl(0deg, 0%, 24%);
   --color-scrollbar-thumb: var(--color-accent);
 
   /* Sizes */
   --size-outer-border: 1rem;
-  /* --size-frame-border: 0.25rem; */
-  /* --size-frame-border: 0rem; */
 
-  --size-header-height: 10rem;
+  --size-header-height: 15rem;
   --size-footer-height: calc(6rem + 1rem);
   --size-ripples-height: 60rem;
+
+  --size-spacer-height: 1rem;
 
   --size-header-padding-x: 3rem;
   --size-header-padding-y: 3rem;
@@ -39,12 +40,12 @@
   :root {
     /* Sizes */
     --size-outer-border: 2rem;
-    /* --size-frame-border: 0.5rem; */
-    /* --size-frame-border: 0rem; */
 
     --size-header-height: 14rem;
     --size-footer-height: calc(8rem + 2rem);
     --size-ripples-height: 84rem;
+
+    --size-spacer-height: 2rem;
 
     --size-header-padding-x: 4rem;
     --size-header-padding-y: 4rem;

@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  margin-bottom: var(--size-section-padding-y);
+  margin-bottom: 1rem;
   width: 100%;
 
   & button {
@@ -28,6 +28,12 @@
         }
       }
     }
+  }
+}
+
+@media (width >= 600px) {
+  .image-grid-container {
+    margin-bottom: 2rem;
   }
 }
 

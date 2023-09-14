@@ -1,16 +1,22 @@
 ---
 import { generateRipples } from '@scripts/ripples'
 
-const colorType = Math.random() <= 1 / 3
+type Props = {
+  index: number
+}
 
+const { index } = Astro.props
+
+const colorType = Math.random() <= 1 / 3
 const posOrNeg = Math.random() < 0.5 ? -1 : 1
+
 const randomX = Math.floor(Math.random() * 50) * posOrNeg
-const randomY = Math.floor(Math.random() * 25) * posOrNeg - 25
-// const randomY = 0
+const randomY =
+  Math.floor(Math.random() * 25) * posOrNeg + (index === 1 ? -25 : 25)
 
 const props = {
   ripples: {
-    color: colorType ? 'url(#iridescence)' : 'var(--color-on-surface)',
+    color: colorType ? 'url(#iridescence)' : 'var(--color-on-background)',
     opacity: colorType ? 0.6 : 0.24,
     width: 0.48,
   },
@@ -22,9 +28,8 @@ const props = {
   viewBox='-144 -144 288 288'
   fill='none'
   style={{
-    position: 'relative',
-    top: `${randomY}%`,
-    left: `${randomX}%`,
+    marginTop: `${randomY}%`,
+    marginLeft: `${randomX}%`,
   }}
 >
   <defs>

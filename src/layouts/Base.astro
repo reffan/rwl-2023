@@ -43,6 +43,7 @@ const { title } = Astro.props
     />
 
     <link rel='sitemap' href='/sitemap-index.xml' />
+    <ViewTransitions />
   </head>
   <body>
     <noscript>
@@ -57,9 +58,10 @@ const { title } = Astro.props
         src={`https://nullitics.com/file.gif?u=reffanliefde.nl${pathname}`}
       />
     </noscript>
-    <div class='ripples' transition:name='ripples'>
-      <Ripples />
-      <Ripples />
+    <div class='ripples' transition:name='ripples' transition:persist>
+      <Ripples index={1} />
+      <Ripples index={2} />
+      <!-- <Ripples index={3} /> -->
     </div>
     <div class='wrapper'>
       <Header />
@@ -73,9 +75,14 @@ const { title } = Astro.props
       import { initFixedHeader } from '@scripts/fixed-header'
       import { initIntersectionObserver } from '@scripts/intersection-observer'
 
-      setAccentColor()
-      initFixedHeader()
-      initIntersectionObserver()
+      const init = () => {
+        setAccentColor()
+        initFixedHeader()
+        initIntersectionObserver()
+      }
+
+      init()
+      document.addEventListener('astro:beforeload', init)
     </script>
   </body>
 </html>
