@@ -199,3 +199,35 @@ footer {
   width: 100%;
   max-width: 1200px;
 }
+
+/* Banner */
+.banner {
+  /* display: none; */
+
+  position: fixed;
+  z-index: 9999;
+
+  object-fit: contain;
+  width: 600px;
+  height: 120px;
+
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+
+  pointer-events: none;
+
+  transform: rotate(-30deg) translateX(108px) translateY(72px);
+}
+
+@media (width >= 600px) {
+  .banner {
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: auto;
+
+    transform: rotate(-30deg) translateX(-168px) translateY(-72px);
+  }
+}
