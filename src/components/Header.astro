@@ -8,7 +8,8 @@ import SvgIcon from '@components/SvgIcon.astro'
   <nav class='responsive-container'>
     <div class='row'>
       <div class='column'>
-        <a class='reverse-accent' href='/'>
+        <a class='reverse-accent content-hidden' href='/'>
+          <span>Reffan Liefde | Designer + Developer</span>
           <div class='svg-wrapper brand-wordmark'>
             <BrandWordmark />
           </div>
@@ -19,14 +20,22 @@ import SvgIcon from '@components/SvgIcon.astro'
           <!-- <li><a href='/'>Work</a></li> -->
           <!-- <li><a href='/about'>About</a></li> -->
           <li>
-            <a class='reverse-accent' href='mailto:mail@reffanliefde.nl'>
+            <a
+              class='reverse-accent content-hidden'
+              href='mailto:mail@reffanliefde.nl'
+            >
+              <span>Email</span>
               <div class='svg-wrapper icon-social'>
                 <SvgIcon icon='email' />
               </div>
             </a>
           </li>
           <li>
-            <a class='reverse-accent' href='https://github.com/reffan'>
+            <a
+              class='reverse-accent content-hidden'
+              href='https://github.com/reffan'
+            >
+              <span>GitHub</span>
               <div class='svg-wrapper icon-social'>
                 <SvgIcon icon='github' />
               </div>
@@ -34,9 +43,10 @@ import SvgIcon from '@components/SvgIcon.astro'
           </li>
           <li>
             <a
-              class='reverse-accent'
+              class='reverse-accent content-hidden'
               href='https://linkedin.com/in/reffanliefde'
             >
+              <span>LinkedIn</span>
               <div class='svg-wrapper icon-social'>
                 <SvgIcon icon='linkedin' />
               </div>
