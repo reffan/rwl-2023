@@ -1,0 +1,47 @@
+---
+const projects = [
+  {
+    title: 'Brightfish',
+    url: 'https://brightfish.com',
+    image: 'logo-brightfish.svg',
+  },
+  // {
+  //   title: 'Gefferie',
+  //   url: 'https://gefferie.com',
+  //   image: 'logo-gefferie.svg',
+  // },
+  {
+    title: 'Innovion',
+    url: 'https://innovion.co',
+    image: 'logo-innovion.svg',
+  },
+  {
+    title: 'AIOZ',
+    url: 'https://aioz.network',
+    image: 'logo-aioz.svg',
+  },
+]
+---
+
+<section class='projects fades-in'>
+  <div class='responsive-container'>
+    <!-- <h1>Projects</h1> -->
+    <ul class='project-list'>
+      {
+        projects.map((project) => (
+          <li class='slides-in'>
+            <div class='logos'>
+              <a href={project.url} class='content-hidden'>
+                <span>{project.title}</span>
+                <img
+                  src={`/assets/projects/${project.image}`}
+                  alt={project.title}
+                />
+              </a>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
