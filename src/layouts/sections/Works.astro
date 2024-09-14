@@ -2,6 +2,9 @@
 import { tagLabels } from '@scripts/utilities'
 
 const works = await Astro.glob('../../pages/work/*.mdx')
+const sortedWorks = works.sort((workA, workB) => {
+  return workA.frontmatter.order - workB.frontmatter.order
+})
 ---
 
 <section class='works fades-in'>
@@ -9,10 +12,10 @@ const works = await Astro.glob('../../pages/work/*.mdx')
     <!-- <h1>Work</h1> -->
     <ul class='work-list'>
       {
-        works.map((work) => (
+        sortedWorks.map((work) => (
           <li class='slides-in'>
             <div class='thumbnails'>
-              <a href={work.url} class='content-hidden'>
+              <a href={work.url} class='link-content-hidden'>
                 <span>{work.frontmatter.title}</span>
                 <div class='thumbnails-container vignette'>
                   <img
