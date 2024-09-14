@@ -51,6 +51,6 @@
   }
 }
 
-.content-hidden > span {
+.link-content-hidden > span {
   display: none;
 }

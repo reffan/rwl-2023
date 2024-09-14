@@ -30,15 +30,13 @@ const projects = [
       {
         projects.map((project) => (
           <li class='slides-in'>
-            <div class='logos'>
-              <a href={project.url} class='content-hidden'>
-                <span>{project.title}</span>
-                <img
-                  src={`/assets/projects/${project.image}`}
-                  alt={project.title}
-                />
-              </a>
-            </div>
+            <a href={project.url} class='link-content-hidden'>
+              <span>{project.title}</span>
+              <img
+                src={`/assets/projects/${project.image}`}
+                alt={project.title}
+              />
+            </a>
           </li>
         ))
       }

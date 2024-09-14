@@ -147,7 +147,7 @@ section.projects {
       justify-content: center;
       align-items: center;
 
-      min-width: 192px;
+      min-width: 16rem;
     }
 
     & a {
