@@ -1,5 +1,5 @@
 # AUTHORS
 
 - Reffan Liefde
-  - [rl@reffanliefde.nl](rl@reffanliefde.nl)
+  - [mail@reffanliefde.nl](mail@reffanliefde.nl)
   - [reffanliefde.nl](https://reffanliefde.nl)
